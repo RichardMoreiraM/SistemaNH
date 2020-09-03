@@ -15,7 +15,9 @@ namespace SistemaNH.Models.DAO
             try {
                 _cnn.Open();
                 Console.WriteLine("Conexión valida");
-            } catch(Exception) {
+            } catch(Exception ex) {
+                Console.WriteLine("Algo fallo!");
+                Console.WriteLine(ex.ToString());
                 _cnn.Close();
             }
         }

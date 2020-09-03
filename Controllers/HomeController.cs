@@ -5,7 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SistemaNH.Models;
+using SistemaNH.Models; //OJO HP AGREGA ESPACIO DE NOMBRES
+using SistemaNH.Models.ViewModel; //OJO HP AGREGA ESPACIO DE NOMBRES
+using SistemaNH.Models.DAO; //OJO HP AGREGA ESPACIO DE NOMBRES
 
 namespace SistemaNH.Controllers
 {
@@ -26,7 +28,13 @@ namespace SistemaNH.Controllers
         {
             return View();
         }
-
+        [HttpPost] //OJO HP
+        [ValidateAntiForgeryToken] //OJO HP
+         public IActionResult Login(Login login)
+        {
+            Conexion.GetInstance().GetConnection();   
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
