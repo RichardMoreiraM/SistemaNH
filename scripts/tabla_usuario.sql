@@ -23,3 +23,6 @@ CREATE TABLE tb_usuario(
     descripcion VARCHAR(100),
     CONSTRAINT  fk_id_rol FOREIGN KEY (rol) REFERENCES tb_rol(id_rol)
 );
+
+INSERT INTO tb_usuario (id, email, clave)
+VALUES('1','rm@gmail.com','1234');
