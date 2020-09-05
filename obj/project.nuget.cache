@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z04qqfjnXtw2VAlCMMy84yx8E/YQRQP5a5ipS6ZeaLrZZxwIahw16vKM36EO4GZ2TmhFWYr3V9h+Jdfv5++kow==",
+  "dgSpecHash": "FXX8hzDUbpIm+IwgkxTDFkv9bPmUNT1WoKhYwMsdbquSZ+ph+Z8/w26FmjO1dJE6fxp/Y9PBXSXt3+ssB4wHyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\TESIS 3.0 SISTEMA NH\\SistemaNH\\SistemaNH.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\TESIS 3.0 SISTEMA NH\\Git\\SistemaNH\\SistemaNH.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",

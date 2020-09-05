@@ -14417,6 +14417,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Admin\\Desktop\\TESIS 3.0 SISTEMA NH\\Git\\SistemaNH\\Views\\Usuario\\UserIndex.cshtml",
+      "TargetPath": "Views\\Usuario\\UserIndex.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Admin\\Desktop\\TESIS 3.0 SISTEMA NH\\Git\\SistemaNH\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"

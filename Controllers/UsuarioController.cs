@@ -6,14 +6,20 @@ using SistemaNH.Models.DTO;
 
 namespace SistemaNH.Controllers
 {
+    
     [ApiController]
     [Route("apiIdentity/usuario")]
     [Authorize(Policy = "Administradores")]
-    public class UserController : ControllerBase
+
+    public class UsuarioController : Controller
     {
+         public IActionResult UserIndex()
+        {
+            return View();
+        }
         private readonly UserDAO _userDao;
 
-        public UserController(UserDAO userDao) {
+        public UsuarioController(UserDAO userDao) {
             _userDao = userDao;
         }
 

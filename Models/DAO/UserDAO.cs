@@ -4,6 +4,7 @@ using MySql.Data.MySqlClient;
 using SistemaNH.Models.DTO;
 
 
+
 namespace SistemaNH.Models.DAO
 {
     public class UserDAO
