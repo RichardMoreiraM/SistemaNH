@@ -42,7 +42,7 @@ namespace SistemaNH.Controllers
 
         [Route("add")]
         [HttpPost]
-        public IActionResult AddUser(User user) {
+        public IActionResult AddUser(Usuario user) {
             var result = _userDao.AddUser(user);
             if(result) 
                 return Ok();

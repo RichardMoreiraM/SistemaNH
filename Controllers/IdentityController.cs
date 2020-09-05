@@ -24,12 +24,12 @@ namespace SistemaNH.Controllers
 
         [Route("login")]
         [HttpPost]
-        public IActionResult Login([FromBody] User user) {
+        public IActionResult Login([FromBody] Usuario user) {
             user = _userDao.Login(user);
             return user.Estado == 1 ? CreateToken(user) : Unauthorized();
         }
 
-        public IActionResult CreateToken(User user) {
+        public IActionResult CreateToken(Usuario user) {
             var claims = new[] {
                 new Claim(JwtRegisteredClaimNames.Sub, (user.Id + user.Email)),
                 new Claim(JwtRegisteredClaimNames.Jti, System.Guid.NewGuid().ToString()),

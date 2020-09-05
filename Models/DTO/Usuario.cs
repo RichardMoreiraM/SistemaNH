@@ -2,6 +2,7 @@
 using System.Text.Json;
 using System.Collections.Generic;
 using SistemaNH.Models.ViewModel;
+using SistemaNH.Models.DAO;
 
 
 namespace SistemaNH.Models.DTO

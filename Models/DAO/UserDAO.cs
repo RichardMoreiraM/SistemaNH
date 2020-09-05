@@ -15,7 +15,7 @@ namespace SistemaNH.Models.DAO
             _cnn = Conexion.GetInstance().GetConnection();
         }
 
-        public User Login(User user) {
+        public Usuario Login(Usuario user) {
             user.Estado = -1;
             try { 
                 var command = new MySqlCommand("call login(@email, @clave)", _cnn);
@@ -34,7 +34,7 @@ namespace SistemaNH.Models.DAO
             }
         }
 
-        public bool AddUser(User user) {
+        public bool AddUser(Usuario user) {
             try {
                 var command = new MySqlCommand("call add_usuario(@json)", _cnn);
                 command.Parameters.AddWithValue("@json", user.ToJSON());
@@ -60,8 +60,8 @@ namespace SistemaNH.Models.DAO
             }
         } 
 
-        public User GetUsuario(string id) {
-            var user = new User();
+        public Usuario GetUsuario(string id) {
+            var user = new Usuario();
             try {
                 var command = new MySqlCommand("call usuario_por_id(@id)", _cnn);
                 command.Parameters.AddWithValue("@id", id);
@@ -74,20 +74,20 @@ namespace SistemaNH.Models.DAO
                         user.Rol = new Rol { Id = oReader["rol_id"].ToString() };
                     }
                 }
-                user.Cursos = GetCursos(id);
+                //user.Cursos = GetCursos(id);
                 return user;
             } catch (Exception) {
                 return user;
             }
         }
 
-        public List<User> GetUsuarios() {
-            var users = new List<User>();
+        public List<Usuario> GetUsuarios() {
+            var users = new List<Usuario>();
             try {
                 var command = new MySqlCommand("call usuarios()", _cnn);
                 using (var oReader = command.ExecuteReader()) {
                     while (oReader.Read()) {
-                        var user = new User();
+                        var user = new Usuario();
                         user.Id = oReader["id"].ToString();
                         user.Cedula = oReader["cedula"].ToString();
                         user.Nombres = oReader["nombres"].ToString();

@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using SistemaNH.Models.Seguridad;
 using SistemaNH.Attributes;
+using SistemaNH.Models.DTO;
 
 
 namespace SistemaNH.Models.ViewModel
