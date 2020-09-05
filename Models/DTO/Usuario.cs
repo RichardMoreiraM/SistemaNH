@@ -2,7 +2,8 @@
 using System.Text.Json;
 using System.Collections.Generic;
 using SistemaNH.Models.ViewModel;
-using SistemaNH.Models.DAO;
+using SistemaNH.Models.Seguridad;
+
 
 
 namespace SistemaNH.Models.DTO
@@ -23,11 +24,11 @@ namespace SistemaNH.Models.DTO
         {
             Id = viewModel.Id;
             Clave = viewModel.Clave;
-            NombreCompleto = viewModel.NombreCompleto;
+            Nombres = viewModel.Nombres;
             FechaExpiracion = viewModel.FechaExpiracion;
-            Jornada = new Jornada { Id = viewModel.IdJornada };
-            Estado = "1";
-            EstadoTabla = 1;
+         //   Jornada = new Jornada { Id = viewModel.IdJornada };
+            Estado = 1;
+           
         }
         public string Id { get; set; }
 
@@ -44,6 +45,8 @@ namespace SistemaNH.Models.DTO
         public string UsuarioIngreso { get; set; }
 
         public DateTime? FechaIngreso { get; set; }
+
+         public DateTime? FechaExpiracion { get; set; }
 
         public string UsuarioModificacion { get; set; }
 

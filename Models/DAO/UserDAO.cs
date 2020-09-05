@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using SistemaNH.Models.DTO;
 
-
-
 namespace SistemaNH.Models.DAO
 {
     public class UserDAO
@@ -95,8 +93,10 @@ namespace SistemaNH.Models.DAO
                         user.Estado = int.Parse(oReader["estado"].ToString());
                         user.UsuarioIngreso = oReader["usuario_ingreso"].ToString();
                         user.FechaIngreso = Parse(oReader["fecha_ingreso"].ToString());
+                        user.FechaExpiracion = Parse(oReader["fecha_expiracion"].ToString());
                         user.UsuarioModificacion = oReader["usuario_modificacion"].ToString();
                         user.FechaModificacion = Parse(oReader["fecha_modificacion"].ToString());
+                      //  user.Jornada = new Jornada { IdJornada = oReader["jornada"].ToString() };
                         user.Rol = new Rol { Descripcion = oReader["descripcion"].ToString() };
                         users.Add(user);
                     }

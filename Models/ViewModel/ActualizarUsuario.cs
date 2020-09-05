@@ -16,9 +16,9 @@ namespace SistemaNH.Models.ViewModel
             Id = user.Id;
             Clave = user.Clave;
             ConfirmClave = user.Clave;
-            NombreCompleto = user.NombreCompleto;
+            Nombres = user.Nombres;
             FechaExpiracion = user.FechaExpiracion;
-            IdJornada = user.Jornada.Id;
+          //  IdJornada = user.Jornada.Id;
         }
 
 
@@ -38,7 +38,7 @@ namespace SistemaNH.Models.ViewModel
         [Required(ErrorMessage = "El nombre es requerido!")]
         [StringLength(100, ErrorMessage = "La maxima longitud de caracteres es 100!")]
         [RegularExpression(@"^[^\d\W]+(\s[^\d\W]+)+$", ErrorMessage = "El nombre no es valido!")]
-        public string NombreCompleto { get; set; }
+        public string Nombres { get; set; }
 
 
         [DataType(DataType.Date)]

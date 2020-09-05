@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using SistemaNH.Models.DTO;
 
 namespace SistemaNH.Models.Seguridad
 {
@@ -11,7 +11,7 @@ namespace SistemaNH.Models.Seguridad
         public string NombreJornada { get; set; }
 
 
-      //  public List<Usuario> Usuarios { get; set; }
+       public List<Usuario> Usuarios { get; set; }
 
         public List<Rol> Roles { get; set; }
 
